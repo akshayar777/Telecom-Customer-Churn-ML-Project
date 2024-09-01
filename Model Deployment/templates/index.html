@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Telecom Churn Prediction - Home</title>
+	<style>
+		body{
+			background-color: #f0f0f0;
+			background-image: url('static/images/earth background.jpg');
+            background-size: 1500px 1400px;
+            background-repeat: no-repeat;
+			font-family: Arial,sans-serif;
+			margin: 0;
+			padding: 20px;
+		}
+
+		h1{
+			color: #fff;
+			text-align: center;
+		}
+
+		form{
+			background-color: #fff;
+			padding: 20px;
+			background: rgba(0, 151, 19, 0.1);
+			border-radius: 8px;
+			box-shadow: 0 0 10px rgba(0, 0, 0,1);
+			max-width: 600px;
+			margin: auto;
+		}
+
+		label{
+			display: block;
+			color: white;
+			margin-bottom: 10px;
+			font-weight: bold;
+		}
+
+		input[type='text'],
+		input[type='number'],
+		select{
+			width: calc(100% - 22px);
+			padding: 10px;
+			margin-bottom: 15px;
+			border: 1px solid #ddd;
+			border-radius: 4px;
+		}
+
+		input[type='submit']{
+			background-color: #f11909;
+			color: white;
+			border: none;
+			padding: 15px 20px;
+			text-align: center;
+			text-decoration: none;
+			display: inline-block;
+			font-size: 16px;
+			margin-top: 10px;
+			cursor: pointer;
+			border-radius: 4px;
+		}
+
+		input[type='submit']:hover{
+			background-color: #b3180d;
+		}
+
+		section#nav-bar{
+            border-radius: 10px;
+            
+        }
+
+        .nav{
+            display: flex;
+            color: black;
+        }
+
+        .nav-one{
+            margin-left: 30px;
+        }
+
+        h2{
+            margin-bottom: 20px;
+            font-size: 30px;
+            color: #fff;
+        }
+
+        h4{
+            color: white;
+            padding-left: 120px;
+            padding-right: 120px;
+        }
+
+        h3{
+            color: white;
+            text-align: center;
+        }
+
+        .list ul{
+            display: flex;
+            list-style: none;
+            margin-left: 700px;
+            padding: 10px;
+            font-size: 20px;
+        }
+
+        .hom{
+            margin-left: 70px;
+            text-decoration: none;
+        }
+
+        .ab{
+            font-size: 20px;
+            text-decoration: none;
+        }
+
+
+	</style>
+</head>
+<body>
+
+	<section id="nav-bar">
+        <div class="nav">
+            <div>
+                <img src="static/images/logo.png" alt="logo" style="width: 130px; height: 130px;">
+            </div>
+
+            <div class="nav-one">
+                <h2>TELECOM CHURN PREDICTOR</h2>
+            </div>
+        </div>
+    </section>
+
+    
+    <h4>This app is designed to help telecommunications companies identify customers who are likely to 
+        leave their services. This enables telecom companies to proactively address customer concerns, 
+        implement targeted retention strategies, and ultimately improve customer satisfaction and loyalty. 
+        The app provides insights into churn risks, allowing for more informed decision-making and strategic 
+        planning.</h4>
+
+    <h3>Let's predict...!</h3>
+    <form action="/predict" method="post">
+        <label for="tenure">Tenure:</label>
+        <input type="number" step="any" name="tenure" required placeholder="Enter value"><br><br>
+
+        <label for="MonthlyCharges">Monthly Charges:</label>
+        <input type="number" step="any" name="MonthlyCharges" required placeholder="Enter value"><br><br>
+
+        <label for="PaymentMethod">Payment Method:</label>
+        <select name="PaymentMethod" required>
+            <option value="" >Select Option</option>
+            <option value="Bank transfer (automatic)">Bank transfer (automatic)</option>
+            <option value="Credit card (automatic)">Credit card (automatic)</option>
+            <option value="Electronic check">Electronic check</option>
+            <option value="Mailed check">Mailed check</option>
+        </select><br><br>
+
+        <label for="SeniorCitizen">Senior Citizen:</label>
+        <select name="SeniorCitizen" required>
+            <option value="" >Select Option</option>
+            <option value="Yes">Yes</option>
+            <option value="No">No</option>
+        </select><br><br>
+
+        <label for="Partner">Partner:</label>
+        <select name="Partner" required>
+			<option value="" >Select Option</option>
+            <option value="Yes">Yes</option>
+            <option value="No">No</option>
+        </select><br><br>
+
+        <label for="Dependents">Dependents:</label>
+        <select name="Dependents" required>
+			<option value="" >Select Option</option>
+            <option value="Yes">Yes</option>
+            <option value="No">No</option>
+        </select><br><br>
+
+        <label for="OnlineSecurity">Online Security:</label>
+        <select name="OnlineSecurity" required>
+			<option value="" >Select Option</option>
+            <option value="Yes">Yes</option>
+            <option value="No">No</option>
+        </select><br><br>
+
+        <label for="TechSupport">Tech Support:</label>
+        <select name="TechSupport" required>
+			<option value="" >Select Option</option>
+            <option value="Yes">Yes</option>
+            <option value="No">No</option>
+        </select><br><br>
+
+        <label for="Contract">Contract:</label>
+        <select name="Contract" required>
+			<option value="" >Select Option</option>
+            <option value="Month-to-month">Month-to-month</option>
+            <option value="One year">One year</option>
+            <option value="Two year">Two year</option>
+        </select><br><br>
+
+        <label for="PaperlessBilling">Paperless Billing:</label>
+        <select name="PaperlessBilling" required>
+			<option value="" >Select Option</option>
+            <option value="Yes">Yes</option>
+            <option value="No">No</option>
+        </select><br><br>
+
+        <input type="submit" value="Predict">
+    </form>
+</body>
+</html>
