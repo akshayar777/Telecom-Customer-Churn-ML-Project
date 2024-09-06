@@ -11,10 +11,15 @@ In this project, we aim to find out the key indicators of churn and retention st
 
 
 **Data Cleaning and Preprocessing**
+
 Handling Missing Values: Checked for missing values in the dataset.
+
 Changing data Types: Converted columns to appropriate data types, such as converting
+
 TotalCharges from string to float. There are 11 null values in this column. From the data we can understand Total Charges is the product of tenure and Monthly Charges. So we  handled the missing values by mathematical operations.
+
 Duplicates: No duplicate entries were found.
+
 Outliers: No outliers were found.
 
 
